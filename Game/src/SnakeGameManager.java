@@ -1,11 +1,12 @@
+import java.awt.*;
+import java.io.IOException;
 
-public class SnakeGameManager extends GameManager {
+public class SnakeGameManager extends GameManager  {
 
 	SnakeDraw gameBoard;
 	public SnakeGameManager() {
 		super(game.Snake);
 		gameBoard = new SnakeDraw();
-		gameBoard.si.getInput();
 		start();
 	}
 	
@@ -17,7 +18,8 @@ public class SnakeGameManager extends GameManager {
 		
 		
 		while(this.gameState == state.menu) {
-			System.out.println(gameBoard.si.getInput().toString());
+			gameBoard.draw();
+			gameBoard.repaint();
 		}
 	}
 
