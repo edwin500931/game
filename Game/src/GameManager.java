@@ -1,6 +1,6 @@
 import java.util.Observable;
 
-public abstract class GameManager extends Observable implements Renderer{
+public abstract class GameManager extends Observable{
 	enum state {menu,running,ended};
 	enum game {Snake,Card};
 	
@@ -11,7 +11,6 @@ public abstract class GameManager extends Observable implements Renderer{
 		this.gameType = gameType;
 		this.gameState = state.menu;
 	}
-	
 	public abstract void start();
 	public abstract void end();
 }
