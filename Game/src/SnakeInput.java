@@ -20,7 +20,7 @@ public class SnakeInput extends InputManager {
 		}
 	}
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) { //For Testing
 		
 		JFrame frame = new JFrame("Test");
 		frame.setSize(640, 480);
@@ -38,5 +38,5 @@ public class SnakeInput extends InputManager {
 				e.printStackTrace();
 			}
 		}
-	}
+	}*/
 }
