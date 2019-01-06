@@ -7,16 +7,20 @@ public class SnakeInput extends InputManager {
 		int key = e.getKeyCode();
 		
 		if(key == KeyEvent.VK_LEFT) {
-			setInput(input.left);
+			if(this.currentInput!=input.right)
+				setInput(input.left);
 		}
 		else if(key == KeyEvent.VK_DOWN) {
-			setInput(input.down);
+			if(this.currentInput!=input.up)
+				setInput(input.down);
 		}
 		else if(key == KeyEvent.VK_UP) {
-			setInput(input.up);
+			if(this.currentInput!=input.down)
+				setInput(input.up);
 		}
 		else if(key == KeyEvent.VK_RIGHT) {
-			setInput(input.right);
+			if(this.currentInput!=input.left)
+				setInput(input.right);
 		}
 	}
 	

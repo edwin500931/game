@@ -1,7 +1,7 @@
 import java.util.Observable;
 
 public abstract class GameManager extends Observable{
-	enum state {menu,running,ended};
+	
 	enum game {Snake,Card};
 	
 	game gameType;

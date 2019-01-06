@@ -6,11 +6,13 @@ public class SnakeGameManager extends GameManager  {
 	SnakeDraw gameBoard;
 	public SnakeGameManager() {
 		super(game.Snake);
-		gameBoard = new SnakeDraw();
+		gameBoard = new SnakeDraw(this);
 		start();
 	}
 	
-	
+	public void setState(state state) {
+		this.gameState = state;
+	}
 	
 	
 	@Override
@@ -21,6 +23,7 @@ public class SnakeGameManager extends GameManager  {
 			gameBoard.draw();
 			gameBoard.repaint();
 		}
+		end();
 	}
 
 	@Override

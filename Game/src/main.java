@@ -4,21 +4,20 @@ import java.util.Scanner;
 
 public class main{
 	public static void main(String[] args){
-		/*ScoreBoard scoreboard = new ScoreBoard();
+		ScoreBoard scoreboard = new ScoreBoard();
 		System.out.println("1.Snake game   2.Card Game");
 		System.out.println("Choose a game:");
 		Scanner scanner = new Scanner(System.in);
 		int chosenGame = scanner.nextInt();
+		GameManager gm;
 		if(chosenGame == 1) {
-			GameManager gm = new GameManager(game.Snake);
+			gm = new SnakeGameManager();
 			
 		}
 		if(chosenGame == 2) {
-			GameManager gm = new GameManager(game.Card);
+			//gm = new CardGameManager();
 			
-		}*/
-		
-		
-		SnakeGameManager game = new SnakeGameManager();
+		}
+
 	}
 }
