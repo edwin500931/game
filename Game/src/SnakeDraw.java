@@ -21,7 +21,7 @@ public class SnakeDraw extends JPanel implements Renderer{
 	private Random r = new Random();
 	
 	public SnakeDraw(SnakeGameManager client) {
-		frame = new JFrame("Test");
+		frame = new JFrame("SnakeGame");
 		frame.setSize(640, 480);
 		si = new SnakeInput();
 		frame.addKeyListener(si);
@@ -37,7 +37,7 @@ public class SnakeDraw extends JPanel implements Renderer{
 		fruits = new ArrayList<Fruit>();
 		
 		this.client = client;
-		
+		client.setState(state.running);
 	}
 	
 	@Override
@@ -45,7 +45,7 @@ public class SnakeDraw extends JPanel implements Renderer{
 		ticks++;
 		if(si.getInput()==input.stop)
 			return;
-		if(ticks>300000) {
+		if(ticks>600000) {
 			if(si.getInput()==input.right) {
 				snakeX++;
 			}
@@ -78,6 +78,7 @@ public class SnakeDraw extends JPanel implements Renderer{
 				size++;
 				fruits.remove(i);
 				i--;
+				client.setScore(client.getScore()+10);
 			}
 		}
 		for(int i = 0;i < Snake.size();i++) {

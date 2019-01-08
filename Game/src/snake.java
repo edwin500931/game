@@ -26,10 +26,6 @@ public class snake {
 	public int getHeight() {
 		return height;
 	}
-
-	public void tick() {
-		
-	}
 	
 	public void draw(Graphics g) {
 		g.setColor(Color.BLACK);

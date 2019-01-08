@@ -1,12 +1,11 @@
 import java.util.Observable;
 import java.util.Observer;
 
-public class ScoreBoard implements Observer{
+public abstract class ScoreBoard implements Observer{
+	
+	int score;
 	
 	@Override
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		
-	}
+	public abstract void update(Observable o, Object arg);
 	
 }
